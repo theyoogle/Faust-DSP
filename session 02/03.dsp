@@ -1,13 +1,12 @@
-// signal - a value that changes over time
+// Wire Premitive
+// Identity - Output is same as Input
+// No modification to input signal
 
-//   _   _   _
-// _| |_| |_| |_
-//
+process = _;
+//          _____ 
+//         |     |
+// x(t) -> |-----| -> y(t)
+//         |_____|
 
-// signal - (in faust) a function transforming a time input into a value output (SAMPLE)
-
-//         |---------------|
-//         |   _   _   _   |
-// time -> | _| |_| |_| |_ | -> value (SAMPLE)
-//         |               |
-//         |---------------|
+// Semantics
+// y(t) = x(t)

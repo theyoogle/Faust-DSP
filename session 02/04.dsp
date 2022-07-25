@@ -1,12 +1,19 @@
-// Wire Premitive
-// Identity - Output is same as Input
-// No modification to input signal
+// Audio circuits composing to build more complex ones
+// Wiring/soldering operations
 
-process = _;
-//          _____ 
-//         |     |
-// x(t) -> |-----| -> y(t)
-//         |_____|
+// Composition Operations
 
-// Semantics
-// y(t) = x(t)
+// Split        (priority 1)
+A <: B
+
+// Merge        (priority 1)
+A :> B
+
+// Sequencial   (priority 2)
+A : B
+
+// Parallel     (priority 3)
+A , B
+
+// Recursion    (priority 4)
+A ~ B

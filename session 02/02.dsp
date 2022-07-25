@@ -1,19 +1,13 @@
-// Audio circuits composing to build more complex ones
-// Wiring/soldering operations
+// signal - a value that changes over time
 
-// Composition Operations
+//   _   _   _
+// _| |_| |_| |_
+//
 
-// Split        (priority 1)
-A <: B
+// signal - (in faust) a function transforming a time input into a value output (SAMPLE)
 
-// Merge        (priority 1)
-A :> B
-
-// Sequencial   (priority 2)
-A : B
-
-// Parallel     (priority 3)
-A , B
-
-// Recursion    (priority 4)
-A ~ B
+//         |---------------|
+//         |   _   _   _   |
+// time -> | _| |_| |_| |_ | -> value (SAMPLE)
+//         |               |
+//         |---------------|
