@@ -1,4 +1,4 @@
-// Read only table
+// Read write table
 
 x0,x1,x2,x3,x4 : rwtable : y;
 
